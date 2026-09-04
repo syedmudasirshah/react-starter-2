@@ -2,15 +2,16 @@ import { logo } from "../assests";
 import { icon1 } from "../assests";
 import { icon2 } from "../assests";
 import { navItems } from "../practice";
+import Cta from "./Button";
 
 export default function Header() {
   return (
-    <header className="w-full p-5 bg-gray-400">
-      <div className="flex justify-between items-center gap-5">
+    <header className="w-full p-10 absolute top-0">
+      <div className="flex justify-between items-center gap-5 bg-white py-5 px-10 rounded-full font-medium">
         <a href="">
-          <img src={logo} alt="logo here" />
+          <img className="w-36 h-auto" src={logo} alt="logo here" />
         </a>
-        <ul className="flex justify-center items-center gap-5">
+        <ul className="flex justify-around items-center gap-12 text-base">
           {navItems.map((items) => (
             <li key={items.id}>
               <a href={items.link}>
@@ -23,13 +24,18 @@ export default function Header() {
           ))}
         </ul>
         <div>
-          <ul className="flex">
-            <li className="flex items-center">
-              <img className="mr-2" src={icon1} />
+          <ul className="flex justify-between gap-5">
+            <li className="flex items-center text-base">
+              <img className="mr-2 w-5 h-5" src={icon1} />
               +68 695 88666
             </li>
-            <li className="ml-2 border px-2.25 py-2 rounded-3xl">
-              <img className="" src={icon2} />
+            <li className="border rounded-3xl flex items-center justify-center w-10 h-10">
+              <img className="w-4 h-4" src={icon2} />
+            </li>
+            <li>
+              <Cta intent="outline" size="medium" className="">
+                Add Property
+              </Cta>
             </li>
           </ul>
         </div>
