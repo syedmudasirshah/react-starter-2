@@ -2,7 +2,7 @@ import { logo } from "../assests";
 import { icon1 } from "../assests";
 import { icon2 } from "../assests";
 import { navItems } from "../practice";
-import Cta from "./Button";
+import Cta from "./button";
 
 export default function Header() {
   return (
